@@ -1,0 +1,57 @@
+// Version: 1.0.0
+type CaseStudyMetric__873589693 = {name : Text; value : Text};
+type CaseStudy__205946728 =
+  {
+    approach : Text;
+    challenge : Text;
+    clientQuote : Text;
+    id : Nat;
+    industry : Text;
+    isFeatured : Bool;
+    material : Text;
+    metrics : [CaseStudyMetric__873589693];
+    outcome : Text;
+    title : Text
+  };
+type ContactSubmission__288046300 =
+  {
+    company : Text;
+    email : Text;
+    id : Nat;
+    name : Text;
+    projectScope : Text;
+    timestamp : Timestamp__301639476
+  };
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Service__980514341 =
+  {
+    description : Text;
+    icon : Text;
+    id : Nat;
+    methodology : Text;
+    name : Text;
+    standards : [Text];
+    tools : [Text]
+  };
+type Timestamp__301639476 = Int;
+actor {
+  stable caseStudies :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?CaseStudy__205946728]];
+      var elementIndex : Nat__490723111
+    };
+  stable contacts :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?ContactSubmission__288046300]];
+      var elementIndex : Nat__490723111
+    };
+  stable services :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Service__980514341]];
+      var elementIndex : Nat__490723111
+    }
+};

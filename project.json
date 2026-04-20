@@ -1,0 +1,24 @@
+{
+  "overview": "Professional website for PrimeSpan Engineering Ltd — a specialized engineering consulting firm. Features a content hub model with filterable case studies, service detail pages with technical methodology, and a lead capture contact form designed for high-intent technical buyers.",
+  "features": [
+    "Homepage with hero, services overview, featured case studies, and trust signals",
+    "Services hub with 3 detailed service pages showing methodology, standards, and tools",
+    "Filterable portfolio of case studies by industry and material type",
+    "Full case study detail pages with challenge, approach, and outcome metrics",
+    "About page with certifications and team credentials",
+    "4-field contact form with backend submission storage",
+    "Sticky header with Request Technical Quote CTA",
+    "Dark industrial design with mobile-responsive layout"
+  ],
+  "category": "business-marketing",
+  "tags": [
+    "engineering",
+    "consulting",
+    "portfolio",
+    "case-studies",
+    "lead-generation",
+    "b2b",
+    "industrial"
+  ],
+  "last_updated": "2026-04-20T20:34:04.481Z"
+}

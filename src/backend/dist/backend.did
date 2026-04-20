@@ -1,0 +1,47 @@
+type Timestamp = int;
+type Service = 
+ record {
+   description: text;
+   icon: text;
+   id: nat;
+   methodology: text;
+   name: text;
+   standards: vec text;
+   tools: vec text;
+ };
+type ContactSubmission = 
+ record {
+   company: text;
+   email: text;
+   id: nat;
+   name: text;
+   projectScope: text;
+   timestamp: Timestamp;
+ };
+type CaseStudyMetric = 
+ record {
+   name: text;
+   value: text;
+ };
+type CaseStudy = 
+ record {
+   approach: text;
+   challenge: text;
+   clientQuote: text;
+   id: nat;
+   industry: text;
+   isFeatured: bool;
+   material: text;
+   metrics: vec CaseStudyMetric;
+   outcome: text;
+   title: text;
+ };
+service : {
+  getCaseStudies: () -> (vec CaseStudy) query;
+  getCaseStudy: (id: nat) -> (opt CaseStudy) query;
+  getContactSubmissions: () -> (vec ContactSubmission) query;
+  getFeaturedCaseStudies: () -> (vec CaseStudy) query;
+  getServices: () -> (vec Service) query;
+  submitContact: (name: text, company: text, email: text, projectScope:
+   text) -> (ContactSubmission);
+}
